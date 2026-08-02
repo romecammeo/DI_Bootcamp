@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Rome's Bakery</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Material Icons -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  >
+
+  <!-- Materialize CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  >
+
+  <!-- Custom CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Josefin Sans", sans-serif;
+    }
+
+    nav .brand-logo {
+      font-weight: 700;
+    }
+
+    .hero {
+      min-height: 75vh;
+
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.pexels.com/photos/1756062/pexels-photo-1756062.jpeg?auto=compress&cs=tinysrgb&w=1600");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+
+    .about-image {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card .card-image img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .contact-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .page-footer {
+      padding-top: 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+      nav .brand-logo {
+        font-size: 1.4rem;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="brown darken-3">
+
+    <div class="nav-wrapper container">
+
+      <!-- This link jumps to id="home" -->
+      <a href="#home" class="brand-logo">
+        Rome's Bakery
+      </a>
+
+      <!-- Mobile menu button -->
+      <a
+        href="#"
+        data-target="mobile-menu"
+        class="sidenav-trigger"
+      >
+        <i class="material-icons">menu</i>
+      </a>
+
+      <!-- Desktop navigation -->
+      <ul class="right hide-on-med-and-down">
+
+        <li>
+          <a href="#home">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#products">Products</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- Mobile navigation -->
+  <ul class="sidenav" id="mobile-menu">
+
+    <li>
+      <a href="#home">Home</a>
+    </li>
+
+    <li>
+      <a href="#about">About</a>
+    </li>
+
+    <li>
+      <a href="#products">Products</a>
+    </li>
+
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+
+  </ul>
+
+
+  <!-- HERO SECTION -->
+  <header id="home" class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <h1>
+          Freshly Baked Every Morning
+        </h1>
+
+        <p class="flow-text">
+          Handmade bread, pastries, and cakes made with local
+          ingredients and a lot of care.
+        </p>
+
+        <a
+          href="#products"
+          class="btn-large waves-effect waves-light amber darken-2"
+        >
+          Explore Our Bakery
+
+          <i class="material-icons right">
+            arrow_downward
+          </i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section scrollspy">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col s12 m6">
+
+            <img
+              class="about-image responsive-img"
+              src="https://images.pexels.com/photos/8027652/pexels-photo-8027652.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Baker preparing fresh dough"
+            >
+
+          </div>
+
+          <div class="col s12 m6">
+
+            <h2 class="section-title">
+              About Our Bakery
+            </h2>
+
+            <p class="flow-text">
+              Rome's Bakery combines traditional baking methods
+              with modern flavors.
+            </p>
+
+            <p>
+              Every loaf and pastry is prepared by hand. We use
+              quality ingredients and bake in small batches so that
+              our customers receive fresh products every day.
+            </p>
+
+            <a
+              href="#contact"
+              class="btn waves-effect waves-light brown darken-2"
+            >
+              Contact Us
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCTS SECTION -->
+    <section
+      id="products"
+      class="section brown lighten-5 scrollspy"
+    >
+
+      <div class="container">
+
+        <h2 class="center-align section-title">
+          Our Specialties
+        </h2>
+
+        <div class="row">
+
+          <!-- CARD 1 -->
+          <div class="col s12 m6 l4">
+
+            <div class="card hoverable">
+
+              <div class="card-image">
+
+                <img
+                  src="https://images.pexels.com/photos/230743/pexels-photo-230743.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Fresh artisan bread"
+                >
+
+                <span class="card-title">
+                  Artisan Bread
+                </span>
+
+              </div>
+
+              <div class="card-content">
+
+                <p>
+                  Fresh sourdough bread with a crisp crust and a
+                  soft, flavorful center.
+                </p>
+
+              </div>
+
+              <div class="card-action">
+
+                <a href="#contact">
+                  Order Bread
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- CARD 2 -->
+          <div class="col s12 m6 l4">
+
+            <div class="card hoverable">
+
+              <div class="card-image">
+
+                <img
+                  src="https://images.pexels.com/photos/1775035/pexels-photo-1775035.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Fresh croissants"
+                >
+
+                <span class="card-title">
+                  Butter Croissants
+                </span>
+
+              </div>
+
+              <div class="card-content">
+
+                <p>
+                  Light, flaky croissants prepared with real butter
+                  and baked until golden.
+                </p>
+
+              </div>
+
+              <div class="card-action">
+
+                <a href="#contact">
+                  Order Croissants
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- CARD 3 -->
+          <div class="col s12 m6 l4">
+
+            <div class="card hoverable">
+
+              <div class="card-image">
+
+                <img
+                  src="https://images.pexels.com/photos/1028704/pexels-photo-1028704.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt="Decorated bakery cake"
+                >
+
+                <span class="card-title">
+                  Celebration Cakes
+                </span>
+
+              </div>
+
+              <div class="card-content">
+
+                <p>
+                  Custom cakes for birthdays, celebrations, and
+                  other special occasions.
+                </p>
+
+              </div>
+
+              <div class="card-action">
+
+                <a href="#contact">
+                  Request a Cake
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section
+      id="contact"
+      class="contact-section scrollspy"
+    >
+
+      <div class="container">
+
+        <h2 class="center-align section-title">
+          Contact Us
+        </h2>
+
+        <p class="center-align flow-text">
+          Ask a question or place an order.
+        </p>
+
+        <div class="row">
+
+          <!--
+            s12 = full width on small screens
+            m8 = eight columns on medium screens
+            offset-m2 = two empty columns on the left
+          -->
+          <form
+            id="contact-form"
+            class="col s12 m8 offset-m2"
+          >
+
+            <!-- Name -->
+            <div class="input-field">
+
+              <i class="material-icons prefix">
+                account_circle
+              </i>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                class="validate"
+                required
+              >
+
+              <label for="name">
+                Full Name
+              </label>
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="input-field">
+
+              <i class="material-icons prefix">
+                email
+              </i>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="validate"
+                required
+              >
+
+              <label for="email">
+                Email Address
+              </label>
+
+            </div>
+
+
+            <!-- Message -->
+            <div class="input-field">
+
+              <i class="material-icons prefix">
+                mode_edit
+              </i>
+
+              <textarea
+                id="message"
+                name="message"
+                class="materialize-textarea"
+                required
+              ></textarea>
+
+              <label for="message">
+                Your Message
+              </label>
+
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="center-align">
+
+              <button
+                class="btn-large waves-effect waves-light brown darken-2"
+                type="submit"
+              >
+                Send Message
+
+                <i class="material-icons right">
+                  send
+                </i>
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="page-footer brown darken-3">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col s12 m6">
+
+          <h5 class="white-text">
+            Rome's Bakery
+          </h5>
+
+          <p class="grey-text text-lighten-4">
+            Fresh bread, pastries, and cakes made every day.
+          </p>
+
+        </div>
+
+        <div class="col s12 m4 offset-m2">
+
+          <h5 class="white-text">
+            Navigation
+          </h5>
+
+          <ul>
+
+            <li>
+              <a
+                class="grey-text text-lighten-3"
+                href="#home"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="grey-text text-lighten-3"
+                href="#products"
+              >
+                Products
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="grey-text text-lighten-3"
+                href="#contact"
+              >
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-copyright">
+
+      <div class="container">
+        © 2026 Rome's Bakery
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Our JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidenavs = document.querySelectorAll(".sidenav");
+      M.Sidenav.init(sidenavs);
+
+      const scrollspySections =
+        document.querySelectorAll(".scrollspy");
+
+      M.ScrollSpy.init(scrollspySections, {
+        scrollOffset: 70
+      });
+
+      const contactForm =
+        document.querySelector("#contact-form");
+
+      contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        M.toast({
+          html: "Thank you! Your message has been received."
+        });
+
+        contactForm.reset();
+      });
+    });
+  </script>
+
+</body>
+
+</html>

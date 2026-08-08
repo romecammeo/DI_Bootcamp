@@ -1,8 +1,8 @@
-board = [
+board =  ###Tic tac game 
     [" ", " ", " "],
     [" ", " ", " "],
     [" ", " ", " "]
-]
+
 
 
 def display_board(board):
@@ -72,3 +72,83 @@ while True:
         player = "O"
     else:
         player = "X"
+
+
+
+
+
+
+        ###Exercise 2
+
+
+    import random
+
+wordslist = [
+    'correction',
+    'childish',
+    'beach',
+    'python',
+    'assertive',
+    'interference',
+    'complete',
+    'share',
+    'credit card',
+    'rush',
+    'south'
+]
+
+word = random.choice(wordslist)
+
+# Hide letters, but keep spaces visible
+hidden_word = []
+
+for letter in word:
+    if letter == " ":
+        hidden_word.append(" ")
+    else:
+        hidden_word.append("*")
+
+guessed_letters = []
+wrong_guesses = 0
+
+while True:
+    print("\nWord:", "".join(hidden_word))
+    print("Guessed letters:", guessed_letters)
+    print("Wrong guesses:", wrong_guesses, "/ 6")
+
+    guess = input("Guess a letter: ").lower()
+
+    # Don't allow the same guess twice
+    if guess in guessed_letters:
+        print("You already guessed that letter.")
+        continue
+
+    guessed_letters.append(guess)
+
+    # Correct guess
+    if guess in word:
+        for i in range(len(word)):
+            if word[i] == guess:
+                hidden_word[i] = guess
+
+        print(f"Good guess! The letter {guess} is in the word.")
+
+        # Win condition
+        if "*" not in hidden_word:
+            print("\nWord:", "".join(hidden_word))
+            print(f"Congratulations! You guessed the word: {word}")
+            break
+
+    # Wrong guess
+    else:
+        wrong_guesses += 1
+
+        print(
+            f"Sorry, the letter {guess} is not in the word. "
+            f"You have {6 - wrong_guesses} guesses left."
+        )
+
+        # Lose condition
+        if wrong_guesses == 6:
+            print(f"Game over! The word was: {word}")
+            break

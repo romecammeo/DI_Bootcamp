@@ -1,9 +1,9 @@
-# keys = ["Ten", "Twenty", "Thirty"]  ### EXERCISE 1
-# values = [10, 20, 30]
+keys = ["Ten", "Twenty", "Thirty"]  ### EXERCISE 1
+values = [10, 20, 30]
 
-# result_dictionary = dict(zip(keys, values))
+result_dictionary = dict(zip(keys, values))
 
-# print(result_dictionary)
+print(result_dictionary)
 
 
 
@@ -66,3 +66,32 @@ print(brand["international_competitors"][-1])
 print(brand["major_color"]["US"])
 print(len(brand))
 print(brand.keys())
+
+
+
+users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]. ###Exercise 4 
+
+characters_to_indexes = {}
+
+for index in range(len(users)):
+    characters_to_indexes[users[index]] = index
+
+print(characters_to_indexes)
+
+
+indexes_to_characters = {}
+
+for index in range(len(users)):
+    indexes_to_characters[index] = users[index]
+
+print(indexes_to_characters)
+
+
+sorted_users = sorted(users)
+
+sorted_characters = {}
+
+for index in range(len(sorted_users)):
+    sorted_characters[sorted_users[index]] = index
+
+print(sorted_characters)

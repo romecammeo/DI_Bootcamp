@@ -37,35 +37,29 @@
 
 
 
-# text = input("Enter a string: ")
-# target_letter = input("Which letter do u want counted? ")
+# # text = input("Enter a string: ")
+# # target_letter = input("Which letter do u want counted? ")
 
-# count = 0
+# # count = 0
 
-# for letter in text:
-#         if letter == target_letter:
-#             count = count + 1
+# # for letter in text:
+# #         if letter == target_letter:
+# #             count = count + 1
 
-# print(f"The letter '{target_letter}' appears {count} times.")
+# # print(f"The letter '{target_letter}' appears {count} times.")
 
-def total_sum(*numbers):
-	"""
-	Return the total sum of the provided numbers.
-	Accepts either multiple numeric arguments or a single iterable.
-	Examples:
-	  total_sum(1,2,3) -> 6
-	  total_sum([1,2,3]) -> 6
-	  total_sum() -> 0
-	"""
-	if len(numbers) == 0:
-		return 0
-	if len(numbers) == 1 and hasattr(numbers[0], '__iter__') and not isinstance(numbers[0], (str, bytes)):
-		numbers = numbers[0]
-	return sum(numbers)
+# 		return 0
+# 	if len(numbers) == 1 and hasattr(numbers[0], '__iter__') and not isinstance(numbers[0], (str, bytes)):
+# 		numbers = numbers[0]
+# 	return sum(numbers)
 
 
-if __name__ == "__main__":
-	print("total_sum()", total_sum())
-	print("total_sum(1,2,3) ->", total_sum(1,2,3))
-	print("total_sum([1,2,3,4]) ->", total_sum([1,2,3,4]))
 
+words = ["hello", "world"]
+
+def make_upper(word):
+    return word.upper()
+
+result = map(make_upper, words)
+
+print(list(result))

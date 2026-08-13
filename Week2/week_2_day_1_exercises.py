@@ -6,11 +6,12 @@ class Cat:   ### Excercise 1
 
 
 cat1 = Cat("Dolce", 5)
-cat2 = Cat("Elizabeth", 6)
+cat2 = Cat("Elizabeth", 3)
 cat3 = Cat("Paulina", 3)
 
 
 def find_oldest_cat(cat1, cat2, cat3):
+
     oldest_cat = cat1
 
     if cat2.age > oldest_cat.age:
@@ -30,47 +31,47 @@ print(f"The oldest cat is {oldest_cat.name}, and is {oldest_cat.age} years old!"
 
 
 
-class Dog:
-    def __init__(self, dog_name, dog_height):
-        self.name = dog_name
-        self.height = dog_height
+# class Dog:
+#     def __init__(self, dog_name, dog_height):
+#         self.name = dog_name
+#         self.height = dog_height
 
-    def bark(self):
-        print(f"{self.name} goes woof!")
+#     def bark(self):
+#         print(f"{self.name} goes woof!")
 
-    def jump(self):
-        print(f"{self.name} jumps {self.height * 2} cm high! Wow!")
-
-
-davids_dog = Dog("Dolce", 42)
-sarahs_dog = Dog("Elizabeth", 34)
-
-print(f"David's dog is {davids_dog.name} and is {davids_dog.height} cm tall.")
-davids_dog.bark()
-davids_dog.jump()
-
-print(f"Sarah's dog is {sarahs_dog.name} and is {sarahs_dog.height} cm tall.")
-sarahs_dog.bark()
-sarahs_dog.jump()
+#     def jump(self):
+#         print(f"{self.name} jumps {self.height * 2} cm high! Wow!")
 
 
+# davids_dog = Dog("Dolce", 42)
+# sarahs_dog = Dog("Elizabeth", 34)
 
-class Song:
-    def __init__(self, lyrics):
-        self.lyrics = lyrics
+# print(f"David's dog is {davids_dog.name} and is {davids_dog.height} cm tall.")
+# davids_dog.bark()
+# davids_dog.jump()
 
-    def sing_me_a_song(self):
-        for line in self.lyrics:
-            print(line)
+# print(f"Sarah's dog is {sarahs_dog.name} and is {sarahs_dog.height} cm tall.")
+# sarahs_dog.bark()
+# sarahs_dog.jump()
 
 
-stairway = Song([
-    "There's a lady who's sure",
-    "all that glitters is gold",
-    "and she's buying a stairway to heaven"
-])
 
-stairway.sing_me_a_song()
+# class Song:
+#     def __init__(self, lyrics):
+#         self.lyrics = lyrics
+
+#     def sing_me_a_song(self):
+#         for line in self.lyrics:
+#             print(line)
+
+
+# stairway = Song([
+#     "There's a lady who's sure",
+#     "all that glitters is gold",
+#     "and she's buying a stairway to heaven"
+# ])
+
+# stairway.sing_me_a_song()
 
 
 

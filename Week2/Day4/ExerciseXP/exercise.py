@@ -1,4 +1,9 @@
-import random
+def get_words_from_file(file_path):
+    with open(file_path, "r") as file:
+        content = file.read()
+        words = content.split()
+
+    return words
 
 
 def get_random_sentence(length):
@@ -59,8 +64,4 @@ print(salary)
 data["company"]["employee"]["birth_date"] = "2000-01-01"
 
 with open("employee.json", "w") as file:
-    json.dump(data, file, indent=2)
-
-
-
-
+    json.dump(data, file, indent=4)

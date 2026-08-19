@@ -1,85 +1,74 @@
-import random
-
-
-# ============================================================
-# EXERCISE 1: WHAT ARE YOU LEARNING?
-# ============================================================
 def display_message():
-    print("I am learning about functions in Python.")
+    print("I am learning about functions in Python. Allegedly.")
 
 
 display_message()
 
 
-# ============================================================
-# EXERCISE 2: WHAT'S YOUR FAVORITE BOOK?
-# ============================================================
+
 def favorite_book(title):
     print(f"One of my favorite books is {title}.")
-
-
 favorite_book("Alice in Wonderland")
 
 
-# ============================================================
-# EXERCISE 3: SOME GEOGRAPHY
-# ============================================================
-def describe_city(city, country="Unknown"):
+
+
+def describe_city(city, country="Unknown"):  ### Excercise 3
     print(f"{city} is in {country}.")
+describe_city()
 
 
-describe_city("Reykjavik", "Iceland")
-describe_city("Paris")
 
 
-# ============================================================
-# EXERCISE 4: RANDOM
-# ============================================================
-def compare_random_number(number):
+
+
+import random.   ### Excercise 4
+
+def compare_number(user_number):
     random_number = random.randint(1, 100)
 
-    if number == random_number:
+    if user_number == random_number:
         print("Success!")
     else:
-        print(f"Fail. Your number was {number}, and the random number was {random_number}.")
+        print(f"Fail! Your number: {user_number}, Random number: {random_number}")
 
 
-compare_random_number(42)
+user_number = int(input("Enter a number between 1 and 100: "))
+compare_number(user_number)
 
 
-def make_shirt(size="large", text="I love Python"):
-    print(f'The shirt is size {size} and has the text "{text}" printed on it.')
 
 
+def make_shirt(size="large", text="I love Python"):  ### Exercise 5
+    print(f"The size of the shirt is {size} and the text is {text}.")
 make_shirt()
-make_shirt("medium")
-make_shirt("small", "Coding is fun")
-make_shirt(size="small", text="Hello!")
+make_shirt(size="medium")
+make_shirt(size="small", text="i SUCK at Python Bruh")
 
 
-# ============================================================
-# EXERCISE 6: MAGICIANS
-# ============================================================
-magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
+
+magician_names = ['Harry Houdini', 'David Blaine', 'Criss Angel'].  ###Exercise 6
 
 
-def show_magicians(names):
-    for magician in names:
+def show_magicians(magician_names):
+    for magician in magician_names:
         print(magician)
 
 
-def make_great(names):
-    for index in range(len(names)):
-        names[index] = names[index] + " the Great"
+def make_great(magician_names):
+    for index in range(len(magician_names)):
+        magician_names[index] = magician_names[index] + " the Great"
 
 
 make_great(magician_names)
 show_magicians(magician_names)
 
 
-# ============================================================
-# EXERCISE 7: TEMPERATURE ADVICE
-# ============================================================
+
+
+import random        ###exercise 7
+
+
 def get_random_temp():
     return random.randint(-10, 40)
 
@@ -90,15 +79,19 @@ def main():
     print(f"The temperature right now is {temperature} degrees Celsius.")
 
     if temperature < 0:
-        print("It is freezing. Wear extra layers.")
-    elif temperature <= 15:
-        print("It is chilly. Wear a coat.")
-    elif temperature <= 23:
-        print("The weather is nice.")
-    elif temperature <= 31:
-        print("It is warm. Stay hydrated.")
+        print("Brrr, that's freezing! Wear some extra layers today.")
+
+    elif temperature < 16:
+        print("Quite chilly! Don't forget your coat.")
+
+    elif temperature < 24:
+        print("Nice weather.")
+
+    elif temperature < 33:
+        print("A bit warm, stay hydrated.")
+
     else:
-        print("It is very hot. Stay cool.")
+        print("It's really hot! Stay cool.")
 
 
 main()

@@ -1,0 +1,26 @@
+class Pet():
+    def __init__(self, animels)
+        self.animels = animels 
+    
+        def walk(self):
+          for animel in self.animels
+            print (animel.walk())
+
+
+        
+
+class Cat(Animal):
+ def __init__(self,name, age)
+   self.name = name
+   self.age = age 
+
+
+           def walk(self):
+        return f"{self.name} is just walking around"
+
+rex.fetch_ball()
+# >> I am a dog, and I love fetching balls
+
+roger = Animal('Roger', 4, "Grr")
+roger.fetch_ball()
+# >> AttributeError: 'Animal' object has no attribute 'fetch_ball'

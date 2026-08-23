@@ -100,8 +100,8 @@ const details = {
   the: 'reindeer'
 }
 
-for (let key in details) {
-    console.log(details[key]);           
+for (let key in details) 
+    console.log(details[key]);        
 
 let sentence = "";
 

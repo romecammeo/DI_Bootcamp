@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>randomtitle</title>
+</head>
+<body>
+<div id="navBar">
+    <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My Friends</a></li>
+        <li><a href="#">Messenger</a></li>
+        <li><a href="#">My Pics</a></li>
+    </ul>
+</div>
+
+<script>
+const navbar = document.querySelector("#navBar");
+
+navbar.setAttribute("id", "socialNetworkNavigation");
+
+const list = navbar.querySelector("ul");
+
+const newTag = document.createElement("li");
+const logoutText = document.createTextNode("Logout");
+
+newTag.appendChild(logoutText);
+list.appendChild(newTag);
+const firstItem = list.firstElementChild; 
+const lastitem = list.lastElementChild; 
+console.log(firstItem.textContent);
+console.log(lastitem.textContent);
+</script>
+
+
+</body>
+</html>

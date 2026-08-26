@@ -1,0 +1,12 @@
+#grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 1px;
+}
+
+.square {
+    background-color: whitesmoke;
+    width: 20x;
+    height: 2x;
+    border: 1px solid grey;
+}

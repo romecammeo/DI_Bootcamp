@@ -1,0 +1,119 @@
+`<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="button" name="test" value="Click me!" onclick="inform()">
+    </form>
+    <script>
+        function inform() {
+            alert("You clicked me")
+        }
+    </script>
+</body>
+</html>`
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="button" id="button1" name="test" value="Click me!">
+    </form>
+    <script>
+        function inform() {
+            alert("You clicked me")
+        }
+
+    document.querySelector("#button1").onclick = inform;
+</script>
+</body>
+</html>`
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="button" id="button1" name="test" value="Click me!">
+    </form>
+    <script>
+        function inform() {
+            alert("You clicked me")
+        }
+
+    document.querySelector("input").onclick = inform;
+</script>
+</body>
+</html>`
+
+
+
+
+
+max.chalov
+11:02 AM
+
+
+
+
+
+
+
+`<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="sampleTable"> 
+        <tr>
+            <td>Row1 cell1</td> 
+            <td>Row1 cell2</td>
+            <td>Row1 cell3</td>
+            <td>Row1 cell4</td>
+            <td>Row1 cell5</td>
+        </tr> 
+        <tr>
+            <td>Row2 cell1</td> 
+            <td>Row2 cell2</td>
+            <td>Row2 cell3</td>
+            <td>Row2 cell4</td>
+            <td>Row2 cell5</td>
+        </tr> 
+    </table>
+    <input type="button" onclick="insertRow()" value="Insert row">
+    <script src="dump.js"></script>
+</body>
+</html>`
+

@@ -136,5 +136,5 @@
 ### Small exercicse
 
 const numbers = [10, 11, 12, 15, 20];
-const mySumFunction2 = (accumulator, item) => accumulator * item % 2 === 1 ? item : 0; 
-console.log(numbers.reduce(mySumFunction2, 0));
+const mySumFunction2 = (accumulator, item) => accumulator *= item % 2 === 1 ? item : 1; 
+console.log(numbers.reduce(mySumFunction2, 1));

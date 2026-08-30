@@ -23,7 +23,7 @@
 
 let myElement = document.querySelector("form")
 myElement.addEventListener("submit", (e) => {
-const warn = "preventDefault() won't let you check this!\n";
+  e.preventDefault();
 let firstName = document.querySelector("#first-name")
 let lastName = document.querySelector("#last-name")
 const something = {

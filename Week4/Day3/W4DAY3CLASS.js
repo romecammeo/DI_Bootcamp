@@ -87,7 +87,7 @@
 
 
 
-
+###My draft
 const myoddFunction = (a, b) => { 
   try { 
     if ((a + b) % 2 === 1) {
@@ -104,3 +104,45 @@ const myoddFunction = (a, b) => {
 console.log(myoddFunction(4, 2));
 console.log(myoddFunction(4, 0));
         
+
+
+/// Instructor solution
+
+const myFunction = (a, b) => {
+
+    const result = a + b;
+    try {        
+        if (result % 2 === 1) throw new Error("Oh no! That is not quite riiiiiight!!!");        
+    } catch (e) {
+        console.log("ERROR " + e.name);
+        console.log(e.message);
+    }
+    return result
+}
+
+let str = "Happy Birthday";
+const patt = /birthday/ i;
+const results = str.match(patt);
+console.log(results);
+
+if (results){
+    console.log('Yes');
+
+} else{
+    console.log('No');
+}
+
+
+for (const i in results) {
+    console.log(result[i]);
+}
+
+    console.log(result['index']);
+
+
+
+
+let str = "Happy Birthday";
+const patt = /da./ i;  // /da../ i;    /da/ i;  /\d/i; /[0-9]/i;  /[a-z]/;  /[A-z]/; [A-Za-z]/;  [A-Za-z]/; /[p-z]/g; /[D|y]/; /[D|y]/ig; /[^hap]/i;
+const results2 = str.match(patt);
+console.log(results2);

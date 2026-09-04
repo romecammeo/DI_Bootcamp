@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="W5D2DC.css">
+</head>
+
+<body>
+
+    <h1>Currency Converter</h1>
+
+    <form>
+
+        <h2>From</h2>
+        <select id="from-currency"></select>
+
+        <h2>To</h2>
+        <select id="to-currency"></select>
+
+        <h2>Amount</h2>
+        <input
+            id="amount"
+            type="number"
+            min="0"
+            step="any"
+        >
+
+        <input
+            type="submit"
+            value="Convert"
+        >
+
+    </form>
+
+    <div id="exchanged"></div>
+
+    <script src="w5d2dcscript.js"></script>
+
+</body>
+</html>

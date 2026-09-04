@@ -1,0 +1,115 @@
+
+:root {
+    --bg-gradient: linear-gradient(to right, #00c6ff, #0072ff);
+    --card-bg: rgba(7, 192, 192, 0.25);
+    --card-hover-bg: rgba(7, 192, 192, 0.45);
+    --text-color: #012030;
+    --input-focus: #0072ff;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+    color: #0ccac4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#search-box {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid #0ccac4;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-box:focus {
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(12, 202, 196, 0.6);
+    transform: scale(1.02);
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.robot-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.robot-card:hover {
+    transform: translateY(-5px);
+    background: var(--card-hover-bg);
+}
+
+.robot-card img {
+    background-color: #012030;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.robot-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    word-wrap: break-word;
+}
+
+.robot-card p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    word-wrap: break-word;
+}
+
+
+
+.hidden {
+    display: none;
+}

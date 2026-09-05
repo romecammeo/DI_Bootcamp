@@ -1,6 +1,6 @@
 
 async function getCharacter() {
-    const randomId = Math.floor(Math.random() * 82) + 1;
+    const randomId = Math.floor(Math.random() * 83) + 1;
 
     const url =
         `https://www.swapi.tech/api/people/${randomId}`;
@@ -37,6 +37,7 @@ const genderElement = document.querySelector("#gender");
 const birthYearElement = document.querySelector("#birth-year");
 const homeWorldElement = document.querySelector("#home-world");
 
+nameElement.textContent = "Loading...";
 heightElement.textContent = character.height;
 nameElement.textContent = character.name;
 genderElement.textContent = character.gender;

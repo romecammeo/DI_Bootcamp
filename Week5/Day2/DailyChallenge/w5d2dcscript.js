@@ -1,34 +1,117 @@
-async function randomfunction() {
+async function initializeConverter() {
+    try {
+        const response =
+            await fetch(
+                "https://v6.exchangerate-api.com/v6/API_KEY/latest/USD"
+            );
 
-   const amountInput =
-    document.querySelector("#amount");
+        if (!response.ok) {
+            throw new Error(
+                "Could not load currencies"
+            );
+        }
 
-const resultElement =
-    document.querySelector("#exchanged");
+        const data =
+            await response.json();
 
-    const fromSelect = document.querySelector("#from-currency");
-    const toSelect = document.querySelector("#to-currency");
+        const currencyKeys =
+            Object.keys(
+                data.conversion_rates
+            );
 
+        const fromSelect =
+            document.querySelector(
+                "#from-currency"
+            );
 
-    const form = document.querySelector("form");
-    form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+        const toSelect =
+            document.querySelector(
+                "#to-currency"
+            );
 
-        const from = fromSelect.value;
-        const to = toSelect.value;
-        const amount = amountInput.value;
+        for (const key of currencyKeys) {
+            const fromOption =
+                document.createElement(
+                    "option"
+                );
 
-        const apiurl =
-            `https://v6.exchangerate-api.com/v6/66856124f81788efb71b5426/pair/${from}/${to}/${amount}`;
+            fromOption.value = key;
+            fromOption.textContent = key;
 
-        const conversionResponse =
-            await fetch(apiurl);
+            const toOption =
+                document.createElement(
+                    "option"
+                );
 
-        const conversionData =
-            await conversionResponse.json();
+            toOption.value = key;
+            toOption.textContent = key;
 
-        console.log(conversionData);
-    });
+            fromSelect.append(fromOption);
+            toSelect.append(toOption);
+        }
+
+        const form =
+            document.querySelector("form");
+
+        const amountInput =
+            document.querySelector(
+                "#amount"
+            );
+
+        const resultElement =
+            document.querySelector(
+                "#exchanged"
+            );
+
+        form.addEventListener(
+            "submit",
+            async (e) => {
+                e.preventDefault();
+
+                const from =
+                    fromSelect.value;
+
+                const to =
+                    toSelect.value;
+
+                const amount =
+                    amountInput.value;
+
+                const conversionUrl =
+                    `https://v6.exchangerate-api.com/v6/API_KEY/pair/${from}/${to}/${amount}`;
+
+                try {
+                    const conversionResponse =
+                        await fetch(
+                            conversionUrl
+                        );
+
+                    if (
+                        !conversionResponse.ok
+                    ) {
+                        throw new Error(
+                            "Conversion failed"
+                        );
+                    }
+
+                    const conversionData =
+                        await conversionResponse.json();
+
+                    resultElement.textContent =
+                        `${amount} ${from} = ${conversionData.conversion_result} ${to}`;
+
+                } catch (error) {
+                    resultElement.textContent =
+                        "Conversion failed.";
+
+                    console.log(error);
+                }
+            }
+        );
+
+    } catch (error) {
+        console.log(error);
+    }
 }
 
-randomfunction();
+initializeConverter();

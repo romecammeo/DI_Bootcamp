@@ -18,8 +18,20 @@
 
  const promise3 = new Promise((resolve) => {
   setTimeout(() => {
-    resolve("success");
+    resolve("great success");
   } , 4000);
  });
 
-console.log(promise3)
+promise3.then(result => {
+    console.log(result);
+});
+
+
+ const 1 = Promise.resolve(3);
+ const 2 = Promise.reject("Boo!");
+
+ promise1.then(result => console.log(result));
+
+promise2.catch(error => console.log(error));
+
+ 

@@ -1,17 +1,23 @@
-// function calculateSum (a, b) {
-//       return a+b;
-// }  
+// // function calculateSum (a, b) {
+// //       return a+b;
+// // }  
 
-// console.log(calculateSum(5, 10));
-// console.log(calculateSum("100", 3));
-// console.log(calculateSum(undefined, 3));
+// // console.log(calculateSum(5, 10));
+// // console.log(calculateSum("100", 3));
+// // console.log(calculateSum(undefined, 3));
 
 
-function Myfunction(){
-      while(true) {
+// function Myfunction(){
+//       while(true) {
 
-      }
-      return 1;
-}
+//       }
+//       return 1;
+// }
 
-myFunction();
+// myFunction();
+
+// function myFunction(): never {
+//       throw new Error("Oh no");
+// }
+
+// myFunction(); 

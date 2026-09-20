@@ -34,15 +34,22 @@ app.listen(5000, () => {
 
 
 app.get("/api/books/:bookid", (request, response) => {
-const id = Number (request.params.bookid)
- const book = books.find(book => book.id === id);
-  response.json(book)
-});
+  const id = Number(request.params.bookid);
 
+  const book = books.find(book => book.id === id);
+
+  if (!book) {
+    return response.status(404).json({
+      message: "Book not found"
+    });
+  }
+
+  response.status(200).json(book);
+});
 
 app.post("/api/books", (request, response) => {
     const newId = Math.max(...books.map(book => book.id)) + 1;
-    const newbook = {
+    const newBook = {
         id:newId,
      title: request.body.title,
     author: request.body.author,

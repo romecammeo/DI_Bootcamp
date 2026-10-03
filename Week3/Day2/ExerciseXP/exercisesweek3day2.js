@@ -21,40 +21,38 @@
 
 // ###Exercise 2
 
-// const stock = { 
-//     "banana": 6, 
-//     "apple": 0,
-//     "pear": 12,
-//     "orange": 32,
-//     "blueberry":1
-// }  
+const stock = { 
+    "banana": 6, 
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+}  
 
-// const prices = {    
-//     "banana": 4, 
-//     "apple": 2, 
-//     "pear": 1,
-//     "orange": 1.5,
-//     "blueberry":10
-// } 
+const prices = {    
+    "banana": 4, 
+    "apple": 2, 
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+} 
 
 
-// const shoppingList = ["banana", "orange", "apple"];
+const shoppingList = ["banana", "orange", "apple"];
+const myBill = () => {
+  let total = 0;
 
-// const myBill = () => {
-//     let total = 0;
+  for (const item of shoppingList) {
+    if (stock[item] > 0) {
+      total += prices[item];
+      stock[item] -= 1;
+    }
+  }
 
-//     for (let i = 0; i < shoppingList.length; i++) {
-//         const item = shoppingList[i];
+  return total;
+};
 
-//         if (stock[item] > 0) {
-//             total += prices[item];
-//         }
-//     }
-
-//     return total;
-// };
-
-// console.log(myBill());
+console.log(myBill());
 
 // const changeEnough = (itemPrice, amountOfChange) => {
 //     const totalChange =
@@ -68,6 +66,9 @@
 //     } else {
 //         return false;
 //     }
+
+
+
 // };
 
 // console.log(changeEnough(4.25, [25, 20, 5, 0]));
@@ -135,19 +136,19 @@
 
 
 
-### exercise 6 
-const navbar = document.querySelector("#navBar");
+// ### exercise 6 
+// const navbar = document.querySelector("#navBar");
 
-navbar.setAttribute("id", "socialNetworkNavigation");
+// navbar.setAttribute("id", "socialNetworkNavigation");
 
-const list = navbar.querySelector("ul");
+// const list = navbar.querySelector("ul");
 
-const newTag = document.createElement("li");
-const logoutText = document.createTextNode("Logout");
+// const newTag = document.createElement("li");
+// const logoutText = document.createTextNode("Logout");
 
-newTag.appendChild(logoutText);
-list.appendChild(newTag);
-const firstItem = list.firstElementChild; 
-const lastitem = list.lastElementChild; 
-console.log(firstItem.textContent);
-console.log(lastitem.textContent);
+// newTag.appendChild(logoutText);
+// list.appendChild(newTag);
+// const firstItem = list.firstElementChild; 
+// const lastitem = list.lastElementChild; 
+// console.log(firstItem.textContent);
+// console.log(lastitem.textContent);

@@ -57,10 +57,30 @@ SELECT
 FROM film
 ORDER BY rental_rate ASC;
 
-SELECT address.address , address.phone 
-FROM address 
+SELECT address.address, address.phone
+FROM address
 INNER JOIN customer
-ON customer.customer_id = address.address_id
+ON customer.address_id = address.address_id
+WHERE address.district = 'Texas';
+
+SELECT *
+FROM film
+WHERE film_id = 15
+   OR film_id = 150;
+
+SELECT film_id, title, description, length, rental_rate
+FROM film
+WHERE film.title = 'Gatacca';
+
+
+SELECT film_id, title, description, length, rental_rate
+FROM film
+WHERE title LIKE 'Ga%';
+
+SELECT film_id, title, rental_rate
+FROM film
+ORDER BY rental_rate ASC
+LIMIT 10;
 
 CREATE TABLE new_film (
     id SERIAL PRIMARY KEY,
@@ -74,6 +94,36 @@ FROM information_schema.tables
 WHERE table_schema = 'public'
   AND table_name = 'new_film';
 
+
+SELECT city.city, country.country
+FROM city
+JOIN country
+ON city.country_id = country.country_id;
+
+
+SELECT
+    customer.customer_id,
+    customer.first_name,
+    customer.last_name,
+    payment.amount,
+    payment.payment_date
+FROM customer
+INNER JOIN payment
+ON customer.customer_id = payment.customer_id
+ORDER BY customer.customer_id ASC;
+
+
+SELECT film.film_id, film.title
+FROM film
+LEFT JOIN inventory
+ON film.film_id = inventory.film_id
+WHERE inventory.inventory_id IS NULL;
+
+
+SELECT city.city, country.country
+FROM city
+INNER JOIN country
+ON city.country_id = country.country_id;
   
 CREATE TABLE new_film (
     id SERIAL PRIMARY KEY,
@@ -95,7 +145,6 @@ INSERT INTO new_film (name)
 VALUES
     ('Database Wars'),
     ('The SQL Awakens');
-
 
 CREATE TABLE customer_review (
     review_id SERIAL PRIMARY KEY,

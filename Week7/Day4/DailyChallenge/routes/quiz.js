@@ -42,6 +42,12 @@ router.post('/quiz', (req, res) => {
 
   const currentQuestion = triviaQuestions[currentQuestionIndex];
 
+  if (typeof submittedAnswer ===! 'string') {
+    return res.status(400).json({
+      message: "Please submit a valid answer bruh"
+    });
+  }
+
   const normalizedUserAnswer = submittedAnswer.trim().toLowerCase();
   const normalizedCorrectAnswer = currentQuestion.answer.trim().toLowerCase();
 
@@ -62,13 +68,21 @@ router.post('/quiz', (req, res) => {
   });
 });
 
-router.get('/quiz/score', (req, res) => {
+router.get('/quiz', (req, res) => {
+  if (currentQuestionIndex >= triviaQuestions.length) {
+    return res.json({
+      message: "Quiz complete",
+      score
+    });
+  }
+
+  const currentQuestion = triviaQuestions[currentQuestionIndex];
+
   res.json({
-    score: score,
-    totalQuestions: triviaQuestions.length,
+    question: currentQuestion.question,
+    progress: `${currentQuestionIndex + 1} of ${triviaQuestions.length}`
   });
 });
-
 
 router.post('/quiz/reset', (req, res) => {
   currentQuestionIndex = 0;
